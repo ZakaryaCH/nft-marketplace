@@ -1,0 +1,1080 @@
+@media(max-width: 1440px) {
+    .gm-crd-item {
+        width: 315px;
+    }
+
+    .itm-filter-srch {
+        max-width: 420px;
+        width: 100%;
+    }
+
+    .creator-prof-box {
+        width: 390px;
+        margin-right: 50px;
+    }
+
+    #creator-container .nft-card .nft-card-image {
+        height: 250px;
+    }
+
+    #creator-container .nft-card {
+        margin-bottom: 38px;
+    }
+
+    .itm-pgt-lft {
+        width: 630px;
+        margin-right: 70px;
+    }
+}
+
+
+
+@media(max-width: 1366px) {
+    .gm-crd-item {
+        width: 300px;
+        padding: 20px 20px 20px 20px;
+    }
+
+    .prev-item-wrp {
+        margin-right: 80px;
+    }
+
+    .itm-filter-srch {
+        max-width: 370px;
+    }
+
+    .creator-prof-box {
+        width: 340px;
+        margin-right: 50px;
+        padding: 24px 24px 33px;
+        margin-right: 35px;
+    }
+
+    .creator-banner-bg {
+        height: 215px;
+    }
+}
+
+
+
+
+@media(max-width: 1280px) {
+    .gm-crd-item {
+        width: 290px;
+        padding: 16px 16px 16px 16px;
+    }
+
+    .gm-card-row {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .prev-item-wrp {
+        margin-right: 70px;
+    }
+
+    .creator-prof-box {
+        width: 315px;
+        margin-right: 50px;
+        padding: 18px 18px 28px;
+        margin-right: 25px;
+    }
+
+    .item-pgt-prevImg {
+        height: 390px;
+        border-radius: 14px;
+        padding: 24px;
+    }
+
+    .itm-pgt-lft {
+        width: 550px;
+        margin-right: 60px;
+    }
+}
+
+
+
+@media(max-width: 1024px) {
+    .navbar-nav .nav-item:last-child .nav-link {
+        margin-right: 0;
+    }
+
+    .navbar-nav .nav-item:last-child .nav-link::after {
+        display: none;
+    }
+
+    .navbar-forminline {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 30px;
+    }
+
+    .navbar-nav .nav-item .nav-link,
+    .login,
+    .crypto-dropdown.nice-select {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .navbar-nav {
+        padding-top: 30px;
+    }
+
+    .navbar.scrolled .navbar-brand {
+        transform: scale(1);
+    }
+
+    .hero-content h2 {
+        font-size: 50px;
+        line-height: 62px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .btns {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .hero-btn {
+        max-width: 150px;
+        margin-right: 15px;
+    }
+
+    .hero-borderless-btns {
+        max-width: 218px;
+    }
+
+    .hero-row {
+        padding-bottom: 100px;
+    }
+
+    .hero-wrap {
+        padding-top: 90px;
+    }
+
+    .seller-item {
+        max-width: 270px;
+        height: 100px;
+        padding: 12px 20px;
+        margin-bottom: 28px;
+    }
+
+    .seller-prof {
+        width: 70px;
+        height: 70px;
+        margin-right: 16px;
+    }
+
+    .hotD-row .nft-card {
+        margin-bottom: 30px;
+    }
+
+    .gm-card-row {
+        justify-content: center !important;
+        margin: auto;
+    }
+
+    .gm-card-row .gm-crd-item:not(:last-of-type) {
+        margin-right: 35px;
+    }
+
+    .hot-deals-wrp {
+        padding-top: 60px;
+        padding-bottom: 86px;
+    }
+
+    .filter-search {
+        margin: 0 auto 30px;
+    }
+
+    .categories-wrp {
+        justify-content: center;
+    }
+
+    .filter-right {
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .nft-card-image {
+        height: 230px;
+    }
+
+    .footer-content h5 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .footer-content ul li a {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .explore-wrp {
+        padding-top: 75px;
+        padding-bottom: 100px;
+    }
+
+    .footer-row {
+        padding-bottom: 35px;
+    }
+
+    .footer-bottom p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .footer-bottom {
+        padding-bottom: 20px;
+    }
+
+    .holder a {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .explore-nft-container .nft-card {
+        margin-bottom: 30px;
+    }
+
+    .footer-wrp {
+        padding-top: 40px;
+    }
+
+
+
+    .nft-prev-card {
+        width: 300px;
+    }
+
+    .prev-item-wrp {
+        margin-right: 40px;
+    }
+
+    .itm-filter-srch {
+        margin: 15px 0px;
+    }
+
+    .itm-filtr-right {
+        margin-top: 0;
+    }
+
+    .itm-filter-wrp {
+        padding-bottom: 50px;
+    }
+
+    .creator-profile {
+        padding-bottom: 140px;
+    }
+
+    .itm-filtr-right {
+        justify-content: flex-start;
+    }
+
+    .itm-filter-srch {
+        max-width: 100%;
+    }
+
+    .itm-filter-wrp h2 {
+        margin-bottom: 8px;
+    }
+
+
+    .item-tp-rw {
+        flex-direction: column;
+    }
+
+    .itm-pgt-lft {
+        margin: 0px auto 50px;
+    }
+
+    .powerby-logo {
+        justify-content: center;
+    }
+
+    .itm-pgt-rit {
+        margin: auto;
+    }
+
+    .itm-page-explore {
+        padding-bottom: 120px;
+    }
+
+
+    .account-access-wrp {
+        background-position: bottom left;
+    }
+}
+
+
+
+
+@media(max-width: 834px) {
+    .btns {
+        height: 44px;
+    }
+
+    .hero-btn {
+        max-width: 130px;
+        margin-right: 8px;
+    }
+
+    .hero-borderless-btns {
+        max-width: 210px;
+    }
+
+    .hero-borderless-btns img {
+        margin-left: 4px;
+        width: 16px;
+    }
+
+    .navbar-brand {
+        font-size: 24px;
+        line-height: 33px;
+    }
+
+    .navbar-brand img {
+        width: 50px;
+        margin-right: 15px;
+    }
+
+    .navbar {
+        padding: 12px 0px;
+    }
+
+    .login,
+    .navbar-nav .nav-item .nav-link {
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    .crypto-dropdown.nice-select {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .sign-up {
+        width: 115px;
+    }
+
+    .hero-wrap {
+        padding-top: 80px;
+    }
+
+    .hero-row {
+        padding-bottom: 70px;
+    }
+
+    .hero-container {
+        padding-bottom: 58px;
+    }
+
+    .hero-row {
+        align-items: center;
+    }
+
+    h4 {
+        font-size: 27px;
+        line-height: 38px;
+    }
+
+    .top-collectors-wrp {
+        padding-top: 55px;
+        padding-bottom: 60px;
+    }
+
+    .fox-heading h4::after {
+        width: 75px;
+    }
+
+    .top-deals-wrp {
+        padding-top: 65px;
+        padding-bottom: 50px;
+    }
+
+    .seller-item {
+        max-width: 210px;
+        height: 84px;
+        padding: 12px 20px;
+        margin-bottom: 26px;
+    }
+
+    .seller-prof {
+        width: 55px;
+        height: 55px;
+        margin-right: 15px;
+    }
+
+    .gm-crd-item {
+        max-width: 250px;
+        width: 100%;
+        height: auto;
+    }
+
+    .gm-card-row .gm-crd-item:not(:last-of-type) {
+        margin: 4px;
+    }
+
+    .gm-flip img {
+        width: 18px;
+    }
+
+    .gm-card-head span {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .gm-card-prev {
+        max-width: 70%;
+        margin: 0 auto 5px;
+    }
+
+    .gm-crd-item small {
+        font-size: 10px;
+        line-height: 13px;
+    }
+
+    .gm-crd-item h5 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .gm-crd-item p {
+        font-size: 14px;
+        line-height: 18px;
+        padding-bottom: 14px;
+    }
+
+    .creator-wrp span {
+        font-size: 13px;
+        line-height: 20px;
+        margin-right: 15px;
+    }
+
+    .game-cards-wrp {
+        padding-top: 55px;
+        padding-bottom: 65px;
+    }
+
+    .explore-wrp {
+        padding-top: 55px;
+        padding-bottom: 70px;
+    }
+
+    .categories-item {
+        width: 140px;
+        height: 40px;
+        border-radius: 12px;
+        font-size: 16px;
+    }
+
+    .footer-row .col-md-5 {
+        display: none;
+    }
+
+    .footer-row .col-md-7 {
+        max-width: 100% !important;
+        flex: 100% !important;
+    }
+
+
+
+    .prev-item-wrp {
+        margin-right: 20px;
+    }
+
+    .file-upload-wrapper {
+        height: 65px;
+        padding: 29px 10px 25px 15px;
+    }
+
+    .upload-path {
+        font-size: 12px;
+    }
+
+    .itm-frm-grp label {
+        padding-left: 5px;
+    }
+
+    .itm-rw-grp label {
+        margin-left: 3px;
+    }
+
+    .itm-info-form label {
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+    .itm-info-form .form-control {
+        padding: 8px 10px;
+    }
+
+    .item-btn-wrp button {
+        width: 200px;
+        margin-right: 20px;
+    }
+
+    .minting-wrap {
+        padding-bottom: 130px;
+    }
+
+    .item-heading h5 {
+        font-size: 24px;
+        line-height: 36px;
+        padding-right: 15px;
+    }
+
+    .item-heading h5::after {
+        width: 70px;
+        height: 14px;
+    }
+
+    .info-item-price span {
+        right: 10px;
+    }
+
+    .itm-info-form hr {
+        max-width: 190px;
+    }
+
+    .upload {
+        padding: 7px 4px;
+    }
+
+
+    .creator-row {
+        align-items: center;
+        padding-top: 0px;
+        flex-direction: column;
+    }
+
+    .creator-prof-box {
+        max-width: 360px;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .creator-profile {
+        padding-bottom: 110px;
+    }
+
+    .listed-item-heading {
+        margin-top: 45px;
+        margin-bottom: 15px;
+    }
+
+    .unlisted-item-wrp {
+        padding-bottom: 120px;
+    }
+
+    #itm-explore-cont .nft-card {
+        margin-bottom: 25px;
+    }
+
+}
+
+
+
+
+
+@media(max-width: 565px) {
+    .navbar-brand {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .navbar-brand img {
+        width: 40px;
+        margin-right: 8px;
+    }
+
+    .navbar {
+        padding: 9px 15px;
+    }
+
+    .navbar.navbar.scrolled {
+        padding: 9px 15px;
+    }
+
+    .navbar-toggler {
+        padding: 2px 7px;
+        font-size: 1.3rem;
+    }
+
+    .hero-content h2 {
+        font-size: 42px;
+        line-height: 54px;
+    }
+
+    .hero-wrap {
+        padding-top: 44px;
+    }
+
+    .hero-content p {
+        padding-bottom: 30px;
+    }
+
+    .hero-btns {
+        margin-bottom: 30px;
+    }
+
+    .hero-row {
+        padding-bottom: 0;
+    }
+
+    .scroll-bottom {
+        display: none;
+    }
+
+    .hero-container {
+        padding-bottom: 40px;
+    }
+
+    .top-collectors-wrp {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .fox-heading {
+        margin-bottom: 28px;
+    }
+
+    .seller-item {
+        max-width: 100%;
+        flex: 1;
+        height: 67px;
+        padding: 8px 12px;
+        margin: 5px;
+    }
+
+    .top-deals-wrp {
+        padding-top: 39px;
+        padding-bottom: 38px;
+    }
+
+    .seller-prof {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .seller-content p:not(:last-of-type) {
+        padding-bottom: 3px;
+    }
+
+    .hot-deals-wrp {
+        padding-top: 35px;
+        padding-bottom: 20px;
+    }
+
+    .gm-card-row {
+        flex-wrap: wrap;
+    }
+
+    .gm-crd-item {
+        max-width: 300px;
+        width: 100%;
+        height: 508px;
+        margin-bottom: 26px !important;
+        border-radius: 14px;
+    }
+
+    .game-card-holder {
+        margin-top: 0;
+    }
+
+    .holder a {
+        font-size: 14px;
+        line-height: 18px;
+        margin-right: 8px;
+    }
+
+    .game-cards-wrp {
+        padding-top: 40px;
+        padding-bottom: 35px;
+    }
+
+    .filter-right,
+    .categories-wrp {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .categories-item:not(:last-of-type) {
+        margin-right: 5px;
+    }
+
+    .filter-search {
+        margin: 0 auto 20px;
+    }
+
+    .categories-item {
+        margin: 5px;
+        width: 100px;
+        height: 35px;
+        font-size: 13px;
+        border-radius: 8px;
+    }
+
+    .categories-item img {
+        margin-right: 5px;
+        width: 15px;
+    }
+
+    .filter-wrp {
+        padding-bottom: 14px;
+    }
+
+    .filter-search {
+        height: 40px;
+    }
+
+    .filter-search input {
+        font-size: 15px;
+        padding: 12px 14px;
+    }
+
+    .search-btn {
+        right: 8px;
+    }
+
+    .filter-short-by {
+        margin: 3px;
+    }
+
+    .filter-right {
+        margin-top: 0;
+        margin-bottom: 30px;
+        justify-content: space-between;
+    }
+
+    .itm-filter-wrp {
+        padding-bottom: 0;
+    }
+
+    .filter-select-cont.nice-select {
+        padding: 7px 7px;
+        width: 150px;
+        height: 34px;
+        font-size: 13px;
+    }
+
+    .filter-select-cont.nice-select:after {
+        width: 7px;
+        height: 7px;
+        right: 10px;
+        margin-top: -4px;
+    }
+
+    .explore-wrp {
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+
+    .footer-content-wrp {
+        flex-wrap: wrap;
+    }
+
+    .footer-content {
+        max-width: 50%;
+        width: 100%;
+    }
+
+    .footer-row {
+        padding-bottom: 20px;
+    }
+
+    .navbar-nav {
+        padding-top: 18px;
+    }
+
+    .navbar-forminline {
+        padding-bottom: 10px;
+    }
+
+    .hero-content p br {
+        display: none;
+    }
+
+    .hero-borderless-btns {
+        text-align: center;
+        line-height: 17px;
+    }
+
+    .footer-row .col-md-5 {
+        display: block;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .nft-prev {
+        margin-bottom: 50px;
+    }
+
+    .nft-prev-card {
+        width: 100%;
+    }
+
+    .itm-rw-grp {
+        padding-right: 0;
+    }
+
+    .upload-path {
+        font-size: 10px;
+        line-height: 17px;
+        height: 26px;
+        margin-top: -4px;
+    }
+
+    .file-upload-wrapper {
+        height: 55px;
+        padding: 29px 10px 25px 15px;
+    }
+
+    .info-itm-price p {
+        margin-left: 8px;
+    }
+
+    .itm-info-form .form-group {
+        margin-bottom: 14px !important;
+    }
+
+    .itm-frm-des textarea {
+        height: 95px;
+    }
+
+    .itm-info-form .form-control {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .item-btn-wrp button {
+        width: 140px;
+        margin-right: 15px;
+    }
+
+    .item-btn-wrp a img {
+        margin-right: 8px;
+    }
+
+    .item-btn-wrp {
+        margin-top: 20px;
+    }
+
+    .minting-wrap {
+        padding-bottom: 40px;
+    }
+
+    .minting-row {
+        flex-direction: column;
+    }
+
+    .prev-item-wrp {
+        margin-right: 0;
+    }
+
+    .nft-card {
+        max-width: 340px;
+        margin: auto;
+    }
+
+
+    .itm-filter-wrp {
+        padding-bottom: 30px;
+    }
+
+    #creator-container .nft-card {
+        margin-bottom: 28px;
+    }
+
+    .creator-profile {
+        padding-bottom: 60px;
+        padding-top: 40px;
+    }
+
+    .listed-holder {
+        margin-top: 8px !important;
+    }
+
+    .user-gallery {
+        padding-top: 40px;
+    }
+
+    .listed-item-heading {
+        margin-top: 40px;
+        margin-bottom: 8px;
+    }
+
+    .listed-item-wrp {
+        padding-bottom: 35px;
+    }
+
+    .unlisted-holder {
+        margin-top: 8px;
+    }
+
+    .unlisted-item-wrp {
+        padding-bottom: 65px;
+    }
+
+    .gallery-row .nft-card {
+        margin-bottom: 20px;
+    }
+
+    .nft-cst-lft {
+        padding: 8px 10px;
+    }
+
+    .nft-cst-rit {
+        padding: 8px 14px;
+    }
+
+    .nft-card-content {
+        padding: 16px 20px 32px;
+    }
+
+    .itm-pgt-lft {
+        width: 100%;
+    }
+
+    .item-pgt-prevImg {
+        height: 245px;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: inset 0px 0px 8px rgb(252 132 12 / 75%);
+        margin-bottom: 20px;
+    }
+
+    .item-pgt-prevImg img {
+        border-radius: 5px;
+    }
+
+    .itm-pgt-hadL ul li:not(:last-child) a {
+        margin-right: 15px;
+    }
+
+    .itm-admin-owner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .itm-admin-owner li:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .itm-admin-owner li {
+        margin-bottom: 20px;
+    }
+
+    .itm-pgt-desc p {
+        padding-right: 0;
+    }
+
+    .bid-collection-wrp .bid-coll-item:not(:last-child) {
+        margin-right: 15px;
+    }
+
+    .bid-coll-item h6 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .bid-coll-item span {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 6px;
+        display: inline-block;
+    }
+
+    .bid-collection-wrp {
+        justify-content: space-between;
+    }
+
+    .itm-page-explore {
+        padding-bottom: 65px;
+    }
+
+    .itm-holder-navi {
+        margin-top: 10px;
+    }
+
+    .item-pages-wrp {
+        padding-top: 35px;
+    }
+
+    .account-box {
+        position: inherit;
+        left: inherit;
+        top: inherit;
+        transform: inherit;
+        max-width: 448px;
+        width: 94%;
+        padding: 32px 30px 40px;
+        margin: auto;
+    }
+
+    .account-access-wrp form {
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
+
+    .account-logo {
+        font-size: 24px;
+        line-height: 35px;
+        margin-bottom: 18px;
+    }
+
+    .account-logo img {
+        width: 45px;
+        margin-right: 15px;
+    }
+
+    .account-box h4 {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 42px;
+    }
+
+    .account-box p {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .acc-form .form-control {
+        padding: 5px 5px 5px 10px;
+    }
+
+    .prev-item-wrp {
+        margin: auto;
+    }
+
+    .prev-item-wrp .item-heading {
+        text-align: center;
+    }
+
+    .itm-pgt-lft {
+        margin: 0px auto 70px;
+    }
+}
+
+
+
+@media(max-width: 320px) {
+    .upload-path {
+        font-size: 8px;
+    }
+
+    .item-pgt-prevImg {
+        height: 200px;
+    }
+
+    .filter-select-cont.nice-select {
+        width: 130px;
+    }
+}
