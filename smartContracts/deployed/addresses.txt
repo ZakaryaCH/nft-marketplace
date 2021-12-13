@@ -1,0 +1,8 @@
+BSC testnet:
+
+BEP721: 0x37e51f8397642635e9760F1C52EE702327C5B289
+BEP20: 0xAA1bAFc1E888aC0eEa3dD4E5742df586497D7ef7
+Marketplace: 0xf23Bc04F9504918Cb09fAf497d97fa3412c84F9C
+auction: 0x093a237908AddE84ebaD66F0E337258eEf7592c7
+
+Instead of infura link use: https://data-seed-prebsc-1-s1.binance.org:8545/
