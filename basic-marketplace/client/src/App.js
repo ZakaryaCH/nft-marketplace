@@ -127,7 +127,7 @@ class App extends Component {
         return <>
             <BrowserRouter>
                 <UserContext.Provider value={{state:this.state,changeState:(state)=>this.handleChangeState(state),handleStart:this.handleStart}}>
-                <div>
+                <div style={{backgroundColor:'#EFEDEC'}}>
 
                         <Header logout={()=>this.logout()} onStart={this.handleStart}/>
                         <ToastContainer

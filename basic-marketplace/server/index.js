@@ -9,6 +9,9 @@ import signinRouter from  './routes/signin.js';
 import signupRouter from './routes/signup.js';
 import uploadRouter from './routes/upload.js';
 
+import dotenv from 'dotenv';
+dotenv.config();
+
 const app = express();
 
 app.use(express.json({ limit: '30mb', extended: true }))
@@ -21,7 +24,7 @@ app.use("/signup", signupRouter);
 app.use("/signin", signinRouter);
 app.use("/upload", uploadRouter);
 
-const CONNECTION_URL = 'mongodb+srv://marketplace:marketplace@cluster0.yqjux.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const CONNECTION_URL = process.env.CONNECTION_URL;
 const PORT = process.env.PORT|| 5000;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })

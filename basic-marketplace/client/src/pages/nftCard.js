@@ -1,31 +1,24 @@
 import { toInteger } from 'lodash';
 import React, {useEffect, useState} from 'react';
 import {useHistory} from "react-router-dom";
-import {getMetaByTokenId} from "../services/metaService";
 import { getCurrentPriceByTokenId } from '../utils/auctionInteractor';
-import { web3 } from '../utils/blockchainInteractor';
+import {ListingType, web3} from '../utils/blockchainInteractor';
+import classNames from "classnames";
 
-function NftCard({isAuction=false,tokenId,isMyNft=false,nft}) {
+function NftCard({isMyNft=false,nft}) {
     const history = useHistory();
-    const [nftDetails,setNftDetails] =  useState(null);
     const [auctionDetails, setAuctionDetails] = useState(null);
 
     useEffect(()=>{
-        tokenId && fetchNFT(tokenId);
-    },[])
+        setAuctionDetailsForNFT(nft.tokenId)
+    },[nft])
 
-    const  fetchNFT = async id =>{
-        try{
-            const {data} = await getMetaByTokenId(id);
-            setNftDetails({...nft, ...data});
-            if(isAuction){
-                setAuctionDetails({
-                    currentPrice: Number(web3.utils.fromWei(await getCurrentPriceByTokenId(id))).toFixed(5),
-                    timeRemaining: getTimeRemaining(nft),
-                })
-            }
-        }catch (e) {
-            // toast.error('Something Went Wrong!');
+    const setAuctionDetailsForNFT = async (id)=>{
+        if(nft.listingType === ListingType.AUCTION){
+            setAuctionDetails({
+                currentPrice: Number(web3.utils.fromWei(await getCurrentPriceByTokenId(id))).toFixed(5),
+                timeRemaining: getTimeRemaining(nft),
+            })
         }
     }
 
@@ -44,38 +37,37 @@ function NftCard({isAuction=false,tokenId,isMyNft=false,nft}) {
     const getTimeRemaining = (res) => {
         const today = new Date();
         const endDate = new Date((toInteger(res.startedAt) + toInteger(res.duration))*1000);
+        if(endDate <= today)
+            return getTimeObj(0);
         let secondsRemaining = Math.floor(Math.abs(endDate - today)/1000);
         return getTimeObj(secondsRemaining);
     }
     
     return (
-        <div onClick={()=>history.push(`/nft/${tokenId}`)} className="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
-            <div className="item-group" >
-                <span className="store-label">{nftDetails?.category || 'N/A'}</span>
+        <div onClick={()=>history.push(`/nft/${nft.tokenId}`)} className="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12" >
+            <div className={classNames({'item-group':true,'card-min-ht':!isMyNft})} >
+                <span className="store-label">{nft?.category || 'N/A'}</span>
                 <div className="item-group-content">
                     <div className="item-group-avtar">
-                        <img src={nftDetails?.NFTImage || '/assets/images/preloader.png'} alt="Nft-image" />
+                        <img src={nft?.image || '/assets/images/preloader.png'} alt="Nft-image" />
                     </div>
-                    <h3 className="theme-title"><span>{nftDetails?.title || 'Demo Name'}</span></h3>
+                    <h3 className="theme-title"><span>{nft?.name || 'Demo Name'}</span></h3>
                     {
-                        ( nftDetails?.price || nftDetails?.startingPrice ) &&  isAuction ? <p className="theme-description">Current Price <span className="item-price">{`${auctionDetails?.currentPrice} ETH`}</span></p>: <h2 className="item-price">{nftDetails?.price && `${web3.utils.fromWei(nftDetails?.price, 'ether')} ETH`}</h2>
+                        !isMyNft &&  ( nft?.price || nft?.startingPrice ) &&  nft.listingType === ListingType.AUCTION ? <p className="theme-description">Current Price <span className="item-price">{`${auctionDetails?.currentPrice} ETH`}</span></p>: <h2 className="item-price">{nft?.price && `${web3.utils.fromWei(nft?.price, 'ether')} ETH`}</h2>
                     }
                     {
-                        isAuction && <div className="item-group-timer">
-                            <ul className="clearfix">
+                        !isMyNft &&  nft.listingType === ListingType.AUCTION && <div className="item-group-timer p-0">
+                            <ul className="clearfix p-0">
                                 <li><span>{auctionDetails?.timeRemaining?.days}</span> Days</li>
                                 <li><span>{auctionDetails?.timeRemaining?.hours}</span> Hours</li>
                                 <li><span>{auctionDetails?.timeRemaining?.minutes}</span> Minutes</li>
                             </ul>
-                            Remaining
                         </div>
                     }
-
-
                     {
-                      !isMyNft && ( nftDetails?.price || nftDetails?.startingPrice ) &&
+                      !isMyNft && ( nft?.price || nft?.startingPrice ) &&
                        <div className="item-group-btn">
-                           <button className="theme-btn">{isAuction?'Place Bid':'Buy Now'}</button>
+                           <button className="theme-btn">{nft.listingType === ListingType.AUCTION?'Place Bid':'Buy Now'}</button>
                        </div>
                     }
                     {
@@ -84,7 +76,6 @@ function NftCard({isAuction=false,tokenId,isMyNft=false,nft}) {
                         </div>
 
                     }
-
                 </div>
             </div>
         </div>

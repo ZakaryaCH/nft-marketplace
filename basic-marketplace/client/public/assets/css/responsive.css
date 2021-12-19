@@ -223,10 +223,10 @@
 		right: 66px!important
 	}
 	.header-menu-box .header-navbar-menu .navbar .navbar-toggler {
-		right: 250px!important
+		/*right: 250px!important*/
 	}
 	.header-menu-box .header-navbar-menu .navbar .navbar-toggler {
-		right: 132px!important
+		/*right: 132px!important*/
 	}
 	.header-right-btn>ul>li>.theme-btn {
 		background-color: rgb(12 90 219 / 8%);
@@ -376,9 +376,6 @@
 		max-width: 100%
 	}
 	.header-menu-box .header-navbar-menu .navbar .navbar-toggler {
-		position: absolute;
-		top: 0;
-		right: 82px;
 		height: 45px;
 		width: 45px;
 		background-color: #0c5adb;
@@ -572,12 +569,12 @@
 	.header-menu-box .header-navbar-menu .navbar {
 		position: static
 	}
-	.header-menu-box .header-navbar-menu .navbar .navbar-toggler {
-		position: absolute;
-		top: 0;
-		right: 322px;
-		left: inherit
-	}
+	/*.header-menu-box .header-navbar-menu .navbar .navbar-toggler {*/
+	/*	position: absolute;*/
+	/*	top: 0;*/
+	/*	right: 322px;*/
+	/*	left: inherit*/
+	/*}*/
 	.header-menu-box .header-navbar-menu .navbar .navbar-collapse {
 		position: absolute;
 		top: 100%;

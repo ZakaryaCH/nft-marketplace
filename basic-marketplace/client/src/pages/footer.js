@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer(props) {
     return (
-        <footer className="footer-main">
+        <footer className="footer-main" style={{marginTop:'10px'}}>
             <div className="footer-top">
                 <div className="container">
                     <div className="row">
@@ -16,7 +16,7 @@ function Footer(props) {
                     <div className="row">
                         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div className="copyright-text text-center">
-                                <p>Copyright 2021 <a>NFT Marketplace</a> All Rights Reserved.</p>
+                                <p>Copyright 2021 <a>Digit8labs</a> All Rights Reserved.</p>
                             </div>
                         </div>
                     </div>

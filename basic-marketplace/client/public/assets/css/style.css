@@ -3878,13 +3878,12 @@ body .modal-backdrop.show {
 }
 /* light dark mode css */
 .footer-main {
-    background-color: #111a3a;
+    background-color: #B9B3AC;
     position: relative
 }
 
 .footer-main::before {
     content: "";
-    background-image: url(../images/world_map.png);
     height: 100%;
     width: 100%;
     position: absolute;

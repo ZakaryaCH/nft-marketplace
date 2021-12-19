@@ -3,11 +3,11 @@ import {Link} from "react-router-dom";
 import NftCard from "./nftCard";
 import UserContext from "../contexts/UserContext";
 import {paginate} from "../services/utilService";
-import {getUserNFTs} from "../utils/commonInteractor";
+import {getAllNFTs} from "../utils/commonInteractor";
 import {ListingType} from "../utils/blockchainInteractor";
 import useLoader from "../hooks/useLoader";
 
-let allNfts = [];
+let allNFTs = [];
 let totalCount = 0;
 function MyNfts(props) {
 
@@ -16,29 +16,62 @@ function MyNfts(props) {
     const [data,setData] = useState([]);
     const [currPage,setCurrPage] = useState(1);
     const [totalPage,setTotalPage] = useState(1);
+    const [filters,setFilters] = useState([]);
+    const [catFilters,setCatFilters] = useState([]);
 
     useEffect(()=>{
         init();
-    },[]);
-
+    },[])
     useEffect(()=>{
-        getPageData();
-    },[currPage])
+        let NFTs = [...allNFTs];
+        if(filters.length) NFTs = NFTs.filter(nft=>filters.includes(nft.listingType));
+        if(catFilters.length) NFTs = NFTs.filter(nft=>catFilters.includes(nft.category));
+        getPageData(NFTs)
+    },[filters,catFilters,currPage])
+
+    const handleChange = (filterType)=>{
+        const  idx =   filters.indexOf(filterType);
+        if(idx > -1){
+            filters.splice(idx,1)
+            setFilters([...filters])
+        }else{
+            setFilters([...filters,filterType])
+        }
+        setCurrPage(1);
+    }
+
+    const handleChangeCategory = (filterType)=>{
+        const  idx =   catFilters.indexOf(filterType);
+        if(idx > -1){
+            catFilters.splice(idx,1)
+            setCatFilters([...catFilters])
+        }else{
+            setCatFilters([...catFilters,filterType])
+        }
+        setCurrPage(1);
+    }
+
+    function getPageData(NFTs) {
+        if (NFTs.length) {
+            totalCount = NFTs.length;
+            setTotalPage(Math.ceil(totalCount / 9));
+            const pagedData = paginate(NFTs, currPage, 9);
+            setData(pagedData);
+        } else {
+            totalCount = 0;
+            setTotalPage(0);
+            setData([]);
+        }
+    }
 
     const init = async () =>{
         showLoader();
-        let userNFTs =  await getUserNFTs(state?.user?.address);
-        allNfts = userNFTs;
-        totalCount = userNFTs.length;
-        setTotalPage(Math.ceil(totalCount/9));
-        allNfts.length && getPageData();
+        const NFTs = await getAllNFTs(state?.user?.address);
+        allNFTs = [...NFTs];
+        getPageData(allNFTs);
         hideLoader();
     }
 
-   function getPageData(){
-      const pagedData = paginate(allNfts,currPage,9);
-       setData(pagedData);
-    }
 
     return  (
         <>
@@ -54,19 +87,19 @@ function MyNfts(props) {
                                         <div className="filter-menu">
                                             <ul>
                                                 <li>
-                                                    <input className="styled-checkbox" id="styled-checkbox-8"
-                                                           type="checkbox" defaultValue="value1"/>
+                                                    <input onChange={()=>handleChange(ListingType.AUCTION)} className="styled-checkbox" id="styled-checkbox-8"
+                                                           type="checkbox"/>
                                                     <label htmlFor="styled-checkbox-8"><span>Auction</span></label>
                                                 </li>
                                                 <li>
-                                                    <input className="styled-checkbox" id="styled-checkbox-9"
-                                                           type="checkbox" defaultValue="value1"/>
+                                                    <input onChange={()=>handleChange(ListingType.MARKETPLACE)}  className="styled-checkbox" id="styled-checkbox-9"
+                                                           type="checkbox"/>
                                                     <label htmlFor="styled-checkbox-9"><span>Fixed Price</span></label>
                                                 </li>
                                                 <li>
-                                                    <input className="styled-checkbox" id="styled-checkbox-9"
-                                                           type="checkbox" defaultValue="value1"/>
-                                                    <label htmlFor="styled-checkbox-9"><span>Others</span></label>
+                                                    <input onChange={()=>handleChange(ListingType.NOT_LISTED)}  className="styled-checkbox" id="styled-checkbox-7"
+                                                           type="checkbox"/>
+                                                    <label htmlFor="styled-checkbox-7"><span>Others</span></label>
                                                 </li>
                                             </ul>
                                         </div>
@@ -76,15 +109,15 @@ function MyNfts(props) {
                                         <div className="filter-menu">
                                             <ul>
                                                 <li>
-                                                    <input className="styled-checkbox" id="styled-checkbox-1" type="checkbox" />
+                                                    <input onChange={()=>handleChangeCategory('ART')} className="styled-checkbox" id="styled-checkbox-1" type="checkbox" />
                                                     <label htmlFor="styled-checkbox-1"><span>Art</span></label>
                                                 </li>
                                                 <li>
-                                                    <input className="styled-checkbox" id="styled-checkbox-2" type="checkbox"  />
+                                                    <input onChange={()=>handleChangeCategory('PHOTO')} className="styled-checkbox" id="styled-checkbox-2" type="checkbox"  />
                                                     <label htmlFor="styled-checkbox-2"><span>Photo</span></label>
                                                 </li>
                                                 <li>
-                                                    <input className="styled-checkbox" id="styled-checkbox-3" type="checkbox"  />
+                                                    <input onChange={()=>handleChangeCategory('GIF')} className="styled-checkbox" id="styled-checkbox-3" type="checkbox"  />
                                                     <label htmlFor="styled-checkbox-3"><span>Gif</span></label>
                                                 </li>
                                             </ul>
@@ -124,7 +157,7 @@ function MyNfts(props) {
                                             {
 
                                                 data.map(card=>(
-                                                    <NftCard isMyNft={true} nft={card}  isAuction={card.listingType === ListingType.AUCTION}  tokenId={card.tokenId} key={card.tokenId}/>
+                                                    <NftCard isMyNft={true} nft={card}  key={card.tokenId}/>
                                                 ))
                                             }
                                         </div>

@@ -15,6 +15,7 @@ import {bidByTokenId, cancelAuctionByTokenId, getCurrentPriceByTokenId} from "..
 import useLoader from "../hooks/useLoader";
 import { toInteger } from 'lodash';
 import Countdown from './countdown';
+import * as moment from 'moment'
 
 function NftDetail({match}) {
     const {state} = useContext(UserContext);
@@ -115,13 +116,13 @@ function NftDetail({match}) {
             {
                 loader
             }
-            nftDetails &&  <section className="browse-detail-area page-paddings">
+            nftDetails &&  <section className="browse-detail-area page-paddings" style={{paddingTop:'65px'}}>
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                             <div className="browse-detail-images text-center">
                                 <div className="browse-detail-large">
-                                    <img src={nftDetails?.NFTImage || '/assets/images/preloader.png'} alt=""/>
+                                    <img src={nftDetails?.image || '/assets/images/preloader.png'} alt=""/>
                                 </div>
                                 { nftDetails?.owner.toLowerCase() === state?.user?.address.toLowerCase() && <>
                                     {
@@ -168,7 +169,7 @@ function NftDetail({match}) {
                         <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                             {/*<pre>{JSON.stringify(nftDetails,null,4)}</pre>*/}
                             <div className="browse-detail-info">
-                                <h1 className="theme-title">{nftDetails?.title}</h1>
+                                <h1 className="theme-title">{nftDetails?.name}</h1>
                                 <p className="theme-description">{nftDetails?.description}</p>
                                 <div className="starting-bid">
                                     <ul>
@@ -176,8 +177,8 @@ function NftDetail({match}) {
                                         <li>Category: <span>{nftDetails?.category}</span></li>
                                         <li>Owner: <span><img src="https://d2alktbws33m8c.cloudfront.net/badges.svg"
                                                               alt=""/></span>{nftDetails?.owner}</li>
-                                        {nftDetails?.externalLink && <li>External Link: <a href={nftDetails?.externalLink} target="_blank"
-                                                            style={{color: '#008000'}}>{nftDetails?.externalLink}</a>
+                                        {nftDetails?.external_url && <li>External Link: <a href={nftDetails?.external_url} target="_blank"
+                                                            style={{color: '#008000'}}>{nftDetails?.external_url}</a>
                                         </li>}
                                         <li>
                                             {nftDetails?.listingType === ListingType.NOT_LISTED && <span>This NFT is not listed</span>}
@@ -185,7 +186,7 @@ function NftDetail({match}) {
                                             {nftDetails?.listingType === ListingType.MARKETPLACE && <span>This NFT is listed for Sale on Marketplace</span>}
                                         </li>
                                         {nftDetails?.listingType === ListingType.AUCTION && <>
-                                            <li>Auction Started On: <span>{new Date(toInteger(nftDetails?.startedAt)*1000).toString()}</span></li>
+                                            <li>Auction Started On: <span>{moment(toInteger(nftDetails?.startedAt)*1000).format('MM/DD/YYYY hh:mm:ss a')}</span></li>
                                             <li>Started At Price: <span>{`${Number(web3.utils.fromWei(nftDetails?.startingPrice)).toString()} ETH`}</span></li>
                                             <li>Ending At Price: <span>{`${Number(web3.utils.fromWei(nftDetails?.endingPrice)).toString()} ETH`}</span></li>
                                             <li>Duration: <span>{Math.round(toInteger(nftDetails?.duration) / 3600)} Hours</span></li>

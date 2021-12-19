@@ -35,13 +35,36 @@ export const getTokenInfo = async (req, res) => {
   }
 };
 
+export const getMany = async (req, res) => {
+  const { tokenIDs } = req.body;
+  if(!tokenIDs)
+  return res.status(400).json({
+    message: 'Token ID list needed.',
+  });
+  const data = [];
+  try {
+    for(const tokenID of tokenIDs) {
+      try {
+        const metaData = await metaDataNFT.findOne({ tokenID }, { _id: 0, __v: 0 });
+        data.push(metaData ? metaData : {});
+      } catch (error) {
+        data.push("");
+      }
+    }
+    res.status(200).send(data);
+  } catch (error) {
+    res.status(404).json({ message: "something went wrong" });
+    console.log(error.message);
+  }
+};
+
 export const postMeta = async (req, res) => {
-  const { tokenID, title, description, NFTImage, category, externalLink } =
+  const { tokenID, name, description, image, category, external_url } =
     req.body;
 
-  if (!tokenID || !title || !NFTImage) {
+  if (!tokenID || !name || !image) {
     return res.status(400).json({
-      message: 'Token ID, Title and Link to NFT assest must be provided.',
+      message: 'Token ID, name and Link to NFT assest must be provided.',
     });
   }
 
@@ -52,11 +75,11 @@ export const postMeta = async (req, res) => {
     if (owner.toLowerCase() === req.address.toLowerCase()) {
       const meta = {
         tokenID,
-        title,
+        name,
         description,
-        NFTImage,
+        image,
         category,
-        externalLink,
+        external_url,
         createdAt: new Date().toISOString(),
       };
 

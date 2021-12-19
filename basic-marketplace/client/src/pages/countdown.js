@@ -37,7 +37,7 @@ class Countdown extends Component {
     render() {
         const { days, seconds, hours, minutes, time_up } = this.state
         return ( 
-            <div className="browse-detail-timer">
+            <div className="browse-detail-timer mt-4">
                 <div className="browse-time-left">
                     <ul className="clearfix text-center">
                         <li><span>{days}</span> Days</li>
@@ -46,9 +46,12 @@ class Countdown extends Component {
                         <li><span>{seconds}</span> Secs</li>
                     </ul>
                 </div>
-                <div className="browse-time-right">
-                    <h2>Time is Running Out!</h2>
-                </div>
+                {
+                    (days === 0 && hours === 0) ?  <div className="browse-time-right">
+                        <h2>Time is Running Out!</h2>
+                    </div>:<></>
+                }
+
             </div>
         )
     }

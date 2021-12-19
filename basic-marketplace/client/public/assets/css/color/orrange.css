@@ -1,8 +1,13 @@
 .theme-orrange .header-logo .logo-img{
-	background-image: url(../../images/orrange-logo.png);
+	background-image: url(../../images/Logo_final_text-02.png);
+    background-size: contain;
+    background-position: 0 0;
+    width: 200px;
+    height: 50px;
 }
 .theme-orrange .theme-preloader > span {
-    background-image: url(../../images/orrange-preloader.png);
+    background-size: contain;
+    background-image: url(../../images/Logo_final04-01.png);
 }
 .theme-orrange .theme-btn,
 .theme-orrange .header-right-btn > ul > li > .theme-btn,
@@ -24,10 +29,10 @@
 .theme-orrange .price-range-slider .range-bar .ui-slider-range,
 .theme-orrange .tag,
 .theme-orrange .header-menu-box .header-navbar-menu .navbar .navbar-toggler {
-	background-color: #e76f51;
+	background-color: #FD8C02;
 }
 .theme-orrange .price-range-slider .range-bar .ui-slider-handle{
-	border-color: #e76f51;	
+	border-color: #FD8C02;	
 }
 .theme-orrange .theme-btn:hover::after, 
 .theme-orrange .theme-btn:hover::before,
@@ -40,17 +45,17 @@
 .theme-orrange .item-group:hover .item-group-btn .theme-btn,
 .theme-orrange .list-select-item > li > span.active, 
 .theme-orrange .list-select-item > li > span:hover {
-    border-color: #e76f51;
-    background-color: #e76f51;
+    border-color: #FD8C02;
+    background-color: #FD8C02;
 }
 .theme-orrange .header-right-btn > ul > li > .search-btn,
 .theme-orrange .data-value-btn > button,
 .theme-orrange .earn-btn .theme-btn.mints-btn {
-    background-color: rgb(231 111 81 / 8%) !important;
-    color: #e76f51 !important;
+    background-color: #EFEDEC !important;
+    color: #FD8C02 !important;
 }
 .theme-orrange .browse-product-right > ul > li .browse-list.active{
-	color: #e76f51 !important;	
+	color: #FD8C02 !important;	
 }
 .theme-orrange .header-menu-box .header-navbar-menu .navbar .nav-item .nav-link.active, 
 .theme-orrange .header-menu-box .header-navbar-menu .navbar .nav-item .nav-link:hover,
@@ -84,13 +89,13 @@
 .theme-orrange .proposals-right .proposals-date,
 .theme-orrange .proposals-sidebar-main>ul>li>span>a,
 .theme-orrange .review-authore-detail h4 {
-	color: #e76f51;	
+	color: #FD8C02;	
 }
 .theme-orrange .em_bar_bg {
     background: rgb(231 111 81 / 20%);
 }
 .theme-orrange .em_bar_bg:before {
-    background: #e76f51;
+    background: #FD8C02;
 }
 .theme-orrange .page-background {
     background-color: rgb(231 111 81 / 4%);
@@ -105,7 +110,7 @@
     border-color: rgb(231 111 81 / 20%);
 }
 .theme-orrange .styled-checkbox:checked+label:after{
-	box-shadow: 2px 0 0 #e76f51, 4px 0 0 #e76f51, 4px -2px 0 #e76f51, 4px -4px 0 #e76f51, 4px -6px 0 #e76f51, 4px -8px 0 #e76f51;
+	box-shadow: 2px 0 0 #FD8C02, 4px 0 0 #FD8C02, 4px -2px 0 #FD8C02, 4px -4px 0 #FD8C02, 4px -6px 0 #FD8C02, 4px -8px 0 #FD8C02;
 }
 .theme-orrange .discover-tab-pane-box .discover-tab-right .discover-tab-buy {
     background-color: rgb(231 111 81 / 5%);
@@ -117,10 +122,10 @@
 .theme-orrange .user-panel-header-top,
 .theme-orrange .owner .chat-msg-text,
 .theme-orrange .tag {
-    background-color: #e76f51;
+    background-color: #FD8C02;
 }
 .theme-orrange .user-panel-profile .profile-dropdown .user-links>li > a.user-logout{
-	background-color: #e76f51 !important;	
+	background-color: #FD8C02 !important;	
 }
 .theme-orrange .user-panel-profile h3 > a > span,
 .theme-orrange .user-header-bottom-left .navbar .navbar-nav .nav-item.active .nav-link, 
@@ -137,16 +142,16 @@
 .theme-orrange .theme-table table tbody > tr > td > a,
 .theme-orrange .chat-msg-date span,
 .shadow-dark.theme-orrange .chat-msg-date span {
-    color: #e76f51;
+    color: #FD8C02;
 }
 .theme-orrange .user-no-record-found .user-no-record-icon,
 .theme-orrange .my-earnings-sales-box .my-earnings-no-sales .user-no-record-icon,
 .theme-orrange .setting-change-profile .change-profile-icon {
     background-color: rgb(231 111 81 / 8%) !important;
-    color: #e76f51;
+    color: #FD8C02;
 }
 .theme-orrange .theme-btn:hover{
-	color: #fff;
+	color: #FFE8CC;
 }
 .theme-orrange .header-right-btn > ul > li .login-text {
     background-color: rgb(231 111 81 / 8%);
@@ -159,6 +164,155 @@
 }
 .theme-orrange .msg.active,
 .shadow-dark.theme-orrange .msg.active{
-	border-color: #e76f51;
+	border-color: #FD8C02;
 }
+
+.theme-orrange .browse-product-filter .filter-box {
+    background-color: #E8E6E3;
+    border-color: #E8E6E3;
+}
+.theme-orrange .item-group  {
+    background-color: #E8E6E3;
+    border-color: #E8E6E3;
+}
+
+.theme-orrange .item-group .store-label{
+    background-color: #8A8175;
+    border-color: #8A8175;
+    color: white;
+}
+
+.theme-orrange .item-group-btn .theme-btn{
+    background-color: #FD8C02;
+    border-color: #FD8C02;
+    color: #FFE8CC;
+}
+
+.theme-orrange .header-main{
+    background-color: #EFEDEC;
+    border-color: #EFEDEC;
+}
+
+.theme-orrange .mint-item-main-box{
+    background-color: #E8E6E3;
+    border-color: #E8E6E3;
+}
+
+.theme-orrange .user-panel-profile h3>a>span{
+    background-color: white;
+}
+
+.theme-orrange .browse-product-top{
+    border-color: transparent;
+}
+
+.theme-orrange .user-panel-main-box .user-panel-main{
+    background-color: #E8E6E3;
+    border-color: #E8E6E3;
+}
+
+.theme-orrange .theme-btn{
+    border-radius: 40px;
+}
+
+.theme-orrange .browse-product-filter .filter-box .theme-title{
+    border-bottom-color: #EFEDEC;
+}
+
+.theme-orrange .browse-product-right > ul > li .browse-list.active {
+    background-color: #E8E6E3 !important;
+    border-color: #aaa;
+}
+
+.theme-orrange .browse-product-right>ul>li .browse-list {
+    background-color: #E8E6E3 !important;
+    border-color: #aaa;
+}
+
+.theme-orrange .wallet-detected-box .wallet-detected-item{
+    background-color: #E8E6E3;
+}
+
+.theme-orrange .user-setting-box>a, .user-top-seller-box{
+    background-color: #E8E6E3;
+    border-color: #E8E6E3;
+}
+
+.theme-orrange .user-panel-breadcrumb{
+    border-bottom-color: #E8E6E3;
+}
+
+.theme-orrange .user-panel-profile .profile-dropdown{
+    background-color: #E8E6E3;
+    border-color: #E8E6E3;
+}
+
+.theme-orrange .user-panel-profile .profile-dropdown::before {
+
+    border-bottom-color: #E8E6E3 ;
+}
+
+.theme-orrange .header-main.fixed-header{
+    background-color: #E8E6E3;
+    border-color: #E8E6E3;
+}
+
+.theme-orrange .theme-preloader{
+    background-color: #E8E6E3;
+    border-color: #E8E6E3;
+}
+
+.theme-orrange .setting-change-profile .change-profile-icon>label>i{
+    color: #FD8C02;
+    border-color: #FD8C02;
+}
+
+.theme-orrange .mint-item-form .upload-images-box{
+    border-color: transparent;
+}
+
+.theme-orrange input,textarea,select {
+    border-color: #E8E6E3 !important;
+    background-color: #E8E6E3;
+}
+
+.theme-orrange .item-group-timer>ul>li{
+    background-color: #FFE8CC;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #FD8C02 !important;
+}
+
+.theme-orrange .user-panel-profile .profile-dropdown .user-links>li>a.active, .user-panel-profile .profile-dropdown .user-links>li>a:hover{
+    background-color: #eeeeee;
+}
+
+.theme-orrange .footer-main {
+    background-color: #B9B3AC;
+}
+ .theme-orrange .footer-copyright{
+     border-color: transparent;
+ }
+ .theme-orrange .footer-copyright .copyright-text p{
+     color: #E8E6E3;
+ }
+
+ .theme-orrange .browse-detail-info .browse-bid-detail{
+     background-color: #E8E6E3;
+     border-color: #E8E6E3;
+ }
+
+ .theme-orrange .browse-detail-info .browse-detail-timer{
+     padding: 0;
+     margin: 0;
+ }
+
+ .theme-orrange .theme-input-box label{
+     color: #37332F;
+ }
 /* user panel css */
+
+.theme-orrange .page-paddings{
+    padding: 0;
+}

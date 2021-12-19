@@ -61,7 +61,7 @@ function Profile(props) {
 
     return (
         <>
-            <section className="user-panel-main-box" style={{marginTop:'100px',marginBottom:'50px'}}>
+            <section className="user-panel-main-box" style={{marginTop:'75px',marginBottom:'50px'}}>
                 <div className="container">
                     <div className="row">
                         {/* <pre>{JSON.stringify(profileForm,null,4)}</pre> */}

@@ -11,6 +11,7 @@ import {
     getTokensOfAddressMarketplace, getTotalListedMarketplace
 } from "./marketPlaceInteractor";
 import {getAuctionByTokenId, getAuctionDetails, getCurrentPriceByTokenId} from "./auctionInteractor";
+import {getMetaForMany} from "../services/metaService";
 
 export async function getStoreFrontNFTS(){
     const totalListedMarketplaceCount = await getTotalListedMarketplace();
@@ -34,7 +35,8 @@ export async function getStoreFrontNFTS(){
                 owner : areAuctions[index].seller,
                 ...getAuctionDetails(areAuctions[index]),});
     return storeNFTs;
-}
+};
+
 export async function getUserNFTs(address){
     let UserNFTs = [], auctionPromises = [];
     const ErcBalance = await balanceOfAddressERC721(address);
@@ -80,4 +82,15 @@ export async function getTokenInfo(tokenId){
         }
     }
     return tokenInfo;
+}
+export async function  getAllNFTs(address){
+    let nfts = !address ? await getStoreFrontNFTS() : await getUserNFTs(address);
+    const tokenIDs = [];
+    for(const token of nfts)
+        tokenIDs.push(token.tokenId);
+    let metaDatas = await getMetaForMany({tokenIDs});
+    for(let i=0;i<nfts.length;i++)
+        nfts[i] = {...nfts[i],...metaDatas.data[i]};
+
+    return nfts;
 }

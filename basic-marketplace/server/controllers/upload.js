@@ -2,21 +2,21 @@ import AWS from 'aws-sdk';
 import fs from 'fs';
 import FileType from 'file-type';
 import multiparty from 'multiparty';
-// import dotenv from 'dotenv';
-// dotenv.config();
+import dotenv from 'dotenv';
+dotenv.config();
 
-const testId = 'AKIAQI324NJWNOOQGJV4';
-const testSecret = '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';
-const accessKeyId = process.env.AWS_ACCESS_KEY_ID || testId;
-const secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY || testSecret;
-const bucketName = 'nft-storage-dev';
+// const testId = 'AKIAQI324NJWNOOQGJV4';
+// const testSecret = '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';
+const accessKeyId = process.env.AWS_ACCESS_KEY_ID || 'testId';
+const secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY || 'testSecret';
+const bucketName = process.env.BUCKET_NAME;
 
 AWS.config.update({
   accessKeyId,
   secretAccessKey,
 });
 
-const s3 = new AWS.S3({ region: 'ap-south-1' });
+const s3 = new AWS.S3({ region: process.env.AWS_REGION });
 
 const uploadFile = (buffer, name, type) => {
   const params = {

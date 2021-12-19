@@ -10,18 +10,18 @@ import {mintNFT, getMintFees} from "../utils/marketPlaceInteractor";
 import {getTokenIdFromTxn} from "../utils/blockchainInteractor";
 import useLoader from "../hooks/useLoader";
 import * as Yup from 'yup';
-const re = /^((ftp|http|https):\/\/)?(www.)?(?!.*(ftp|http|https|www.))[a-zA-Z0-9_-]+(\.[a-zA-Z]+)+((\/)[\w#]+)*(\/\w+\?[a-zA-Z0-9_]+=\w+(&[a-zA-Z0-9_]+=\w+)*)?$/gm
+const re = /^(?:(?:https?|ftp):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,}))\.?)(?::\d{2,5})?(?:[/?#]\S*)?$/i
 const NFT_VALIDATION_SCHEMA = Yup.object().shape({
-    title: Yup.string()
+    name: Yup.string()
         .max(120, 'Too Long!')
         .required('Title is Required'),
     description: Yup.string()
         .required('Description is Required'),
     category: Yup.string()
         .required('Category is Required'),
-    NFTImage: Yup.string()
+    image: Yup.string()
         .required('Image is  Required'),
-    externalLink: Yup.string().matches(re,'External Link is not valid'),
+    external_url: Yup.string().matches(re,'External Link is not valid'),
 });
 function MintPage(props) {
     const history = useHistory();
@@ -42,11 +42,11 @@ function MintPage(props) {
     },[user])
 
     let newNFT = {
-        title: '',
+        name: '',
         description: '',
-        externalLink: '',
+        external_url: '',
         category: '',
-        NFTImage: '',
+        image: '',
     };
     const onSubmit = async (values, {resetForm, setSubmitting}) => {
         await submit(values);
@@ -62,7 +62,7 @@ function MintPage(props) {
             const {data} = await uploadFile(formData);
             const url = data.Location;
             if (url) {
-                setFieldValue('NFTImage', url);
+                setFieldValue('image', url);
             }
         }catch (e) {
             toast.error('Something went wrong!')
@@ -111,8 +111,8 @@ function MintPage(props) {
                                                 <div className="mint-item-form">
                                                     <div className="theme-input-box">
                                                         <label>Title</label>
-                                                        <input className="theme-input" value={values.title}
-                                                               onChange={handleChange} type="text" name="title" autoComplete="off"/>
+                                                        <input className="theme-input" value={values.name}
+                                                               onChange={handleChange} type="text" name="name" autoComplete="off"/>
                                                         {errors.title && touched.title ? (
                                                             <div className="text-danger mt-2">{errors.title}</div>
                                                         ) : null}
@@ -132,10 +132,10 @@ function MintPage(props) {
                                                     </div>
                                                     <div className="theme-input-box">
                                                         <label>External Link</label>
-                                                        <input className="theme-input" value={values.externalLink}
-                                                               onChange={handleChange} type="text" name="externalLink" autoComplete="off"/>
-                                                        {errors.externalLink && touched.externalLink ? (
-                                                            <div className="text-danger mt-2">{errors.externalLink}</div>
+                                                        <input className="theme-input" value={values.external_url}
+                                                               onChange={handleChange} type="text" name="external_url" autoComplete="off"/>
+                                                        {errors.external_url && touched.external_url ? (
+                                                            <div className="text-danger mt-2">{errors.external_url}</div>
                                                         ) : null}
                                                     </div>
                                                     <div className="theme-input-box">
@@ -148,11 +148,11 @@ function MintPage(props) {
                                                                          size="lg" color="primary"/>
                                                                 </div>
                                                                 :
-                                                                    values.NFTImage ?
+                                                                    values.image ?
                                                                         <div className="upload-images-preview">
-                                                                            <div onClick={()=>setFieldValue('NFTImage','')} className="d-flex mb-2"><i className="fas fa-times ml-auto" /></div>
-                                                                            <img alt="NFTImage"
-                                                                                 src={values.NFTImage}/>
+                                                                            <div onClick={()=>setFieldValue('image','')} className="d-flex mb-2"><i className="fas fa-times ml-auto" /></div>
+                                                                            <img alt="image"
+                                                                                 src={values.image}/>
                                                                         </div> :
                                                                         <div className="upload-images-item">
                                                                             <label htmlFor="file-upload">
@@ -174,13 +174,13 @@ function MintPage(props) {
                                                             }
 
                                                         </div>
-                                                        {errors.NFTImage && touched.NFTImage ? (
-                                                            <div className="text-danger mt-2">{errors.NFTImage}</div>
+                                                        {errors.image && touched.image ? (
+                                                            <div className="text-danger mt-2">{errors.image}</div>
                                                         ) : null}
                                                     </div>
                                                     <div className="theme-input-box">
                                                         <label>Description</label>
-                                                        <textarea value={values.description} onChange={handleChange}
+                                                        <textarea value={values.description} style={{resize:'none'}} onChange={handleChange}
                                                                   name="description" className="theme-input" id="editor"
                                                                   rows="6" placeholder="Enter Description..."/>
                                                         {errors.description && touched.description ? (

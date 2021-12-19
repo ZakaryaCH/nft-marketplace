@@ -1,40 +1,73 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import NftCard from "./nftCard";
 import {ListingType} from "../utils/blockchainInteractor";
-import UserContext from "../contexts/UserContext";
 import {paginate} from "../services/utilService";
-import {getStoreFrontNFTS} from "../utils/commonInteractor";
+import {getAllNFTs} from "../utils/commonInteractor";
 import useLoader from "../hooks/useLoader";
 
-let storeNFTs = [];
+let allNFTs = [];
 let totalCount = 0;
 function Storefront(props) {
-    const {state} = useContext(UserContext);
     const [loader, showLoader, hideLoader] = useLoader();
     const [data,setData] = useState([]);
     const [currPage,setCurrPage] = useState(1);
     const [totalPage,setTotalPage] = useState(1);
+    const [filters,setFilters] = useState([]);
+    const [catFilters,setCatFilters] = useState([]);
+
 
     useEffect(()=>{
         init();
-    },[])
+    },[]);
+
+    useEffect(()=>{
+        let NFTs = [...allNFTs];
+        if(filters.length) NFTs = NFTs.filter(nft=>filters.includes(nft.listingType));
+        if(catFilters.length) NFTs = NFTs.filter(nft=>catFilters.includes(nft.category));
+        getPageData(NFTs)
+    },[filters,catFilters,currPage])
+
+    const handleChange = (filterType)=>{
+        const  idx = filters.indexOf(filterType);
+        if(idx > -1){
+            filters.splice(idx,1)
+            setFilters([...filters])
+        }else{
+            setFilters([...filters,filterType])
+        }
+        setCurrPage(1);
+    }
+
+    const handleChangeCategory = (filterType)=>{
+        const  idx =   catFilters.indexOf(filterType);
+        if(idx > -1){
+            catFilters.splice(idx,1)
+            setCatFilters([...catFilters])
+        }else{
+            setCatFilters([...catFilters,filterType])
+        }
+        setCurrPage(1);
+    }
+
+    function getPageData(NFTs) {
+        if (NFTs.length) {
+            totalCount = NFTs.length;
+            setTotalPage(Math.ceil(totalCount / 9));
+            const pagedData = paginate(NFTs, currPage, 9);
+            setData(pagedData);
+        } else {
+            totalCount = 0;
+            setTotalPage(0);
+            setData([]);
+        }
+    }
 
     const init = async () =>{
       showLoader()
-      storeNFTs =  await getStoreFrontNFTS();
-      totalCount = storeNFTs.length;
-      setTotalPage(Math.ceil(totalCount/9));
-      storeNFTs.length && getPageData();
+      const NFTs = await getAllNFTs();
+      allNFTs = [...NFTs]
+      getPageData(allNFTs);
       hideLoader()
-    }
-
-    useEffect(()=>{
-        getPageData();
-    },[currPage])
-
-    function getPageData(){
-        const pagedData = paginate(storeNFTs,currPage,9);
-        setData(pagedData);
     }
 
     return (
@@ -50,12 +83,12 @@ function Storefront(props) {
                                     <div className="filter-menu">
                                         <ul>
                                             <li>
-                                                <input className="styled-checkbox" id="styled-checkbox-8"
+                                                <input onChange={()=>handleChange(ListingType.AUCTION)} className="styled-checkbox" id="styled-checkbox-8"
                                                        type="checkbox" defaultValue="value1"/>
                                                 <label htmlFor="styled-checkbox-8"><span>Auction</span></label>
                                             </li>
                                             <li>
-                                                <input className="styled-checkbox" id="styled-checkbox-9"
+                                                <input onChange={()=>handleChange(ListingType.MARKETPLACE)} className="styled-checkbox" id="styled-checkbox-9"
                                                        type="checkbox" defaultValue="value1"/>
                                                 <label htmlFor="styled-checkbox-9"><span>Fixed Price</span></label>
                                             </li>
@@ -67,18 +100,15 @@ function Storefront(props) {
                                     <div className="filter-menu">
                                         <ul>
                                             <li>
-                                                <input className="styled-checkbox" id="styled-checkbox-1"
-                                                       type="checkbox"/>
+                                                <input onChange={()=>handleChangeCategory('ART')} className="styled-checkbox" id="styled-checkbox-1" type="checkbox" />
                                                 <label htmlFor="styled-checkbox-1"><span>Art</span></label>
                                             </li>
                                             <li>
-                                                <input className="styled-checkbox" id="styled-checkbox-2"
-                                                       type="checkbox"/>
+                                                <input onChange={()=>handleChangeCategory('PHOTO')} className="styled-checkbox" id="styled-checkbox-2" type="checkbox"  />
                                                 <label htmlFor="styled-checkbox-2"><span>Photo</span></label>
                                             </li>
                                             <li>
-                                                <input className="styled-checkbox" id="styled-checkbox-3"
-                                                       type="checkbox"/>
+                                                <input onChange={()=>handleChangeCategory('GIF')} className="styled-checkbox" id="styled-checkbox-3" type="checkbox"  />
                                                 <label htmlFor="styled-checkbox-3"><span>Gif</span></label>
                                             </li>
                                         </ul>
@@ -115,9 +145,7 @@ function Storefront(props) {
                                             {
 
                                                 data.map(card => (
-                                                    <NftCard nft={card}
-                                                             isAuction={card.listingType === ListingType.AUCTION}
-                                                             tokenId={card.tokenId} key={card.tokenId}/>
+                                                    <NftCard nft={card} key={card.tokenId}/>
                                                 ))
                                             }
                                         </div>
