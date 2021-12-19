@@ -20,11 +20,13 @@ iii. Ongoing transactions, for the transaction to be confirmed, both parties sho
  b. Admin page:
  listing of:
  All ongoing operations with number of confirmations (1 or 2) with option to:
- 1. validate confirmed operations and trigger the NFT and funds forwarding
- 2. Cancel operation
+ - validate confirmed operations and trigger the NFT and funds forwarding
+ - Cancel operation
 
  All confirmed operations
 
 
 2. Chat system
+
+
 it should allow users to exchange messages in the NFT marketplace, no specific requirements, let's find the easiest way to do it
