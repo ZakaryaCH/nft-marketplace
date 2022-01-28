@@ -1,0 +1,44 @@
+.tabs-container{
+    margin: 0 0 32px;
+}
+
+@media screen and (max-width: 960px){
+    main>.row{
+        flex-direction: column;
+    }
+    .tabs-container{
+        justify-content: center;
+    }
+    .tabs-container{
+        width: max-content;
+        margin-bottom: 8px;
+
+    }
+    .tab{
+        width: max-content;
+        white-space: nowrap;
+    }
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    .tabs-overflow{
+        width: 100%;
+        overflow: auto;
+        margin-bottom: 24px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+}
+
+
+
+@media screen and (max-width: 768px){
+    .section-heading{
+        width: max-content;
+        
+    }
+    .section-heading h2{
+        width: max-content;
+        padding: 0 24px;
+    }
+}

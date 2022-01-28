@@ -1,0 +1,400 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redesign | Admin</title>
+    <link rel="stylesheet" href="./public/css/common.css">
+    <link rel="stylesheet" href="./public/css/admin.css">
+    <link rel="stylesheet" href="./public/css/card.css">
+    <link rel="stylesheet" href="./public/css/filter.css">
+
+</head>
+<body>
+
+    <header>
+        <nav class="row justify-center">
+            <a href="./home.html" class="nav-link branding ">Logo</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="section-heading">
+            <h2>Admin Page</h2>
+            <span class="glow-green"></span>
+        </div>
+  
+            
+        <div class="row justify-between section-container main-content">
+            <div class="filter-sidebar">
+                <div class="row align-center justify-between filters-head">
+                    <h2>Filters</h2>
+                    <img src="./public/images/icons/chevron.png" alt="" class="filter-dropdown-toggle">
+                </div>
+                <div class="filter-group-collapse">
+                    <div class="filter-group">
+                        <div class="row justify-between align-center filter-group-head ">
+                            <h2>Listing Type</h2>
+                            <img src="./public/images/icons/chevron.png" alt="">
+                        </div>
+                        <div class="filter-collapse">
+                            <div class="row align-center checkbox-container">
+                                <div class="checkbox">
+                                    <img src="./public/images/icons/tick.png" alt="">
+                                </div>
+                                <p>Fixed Price</p>
+                            </div>
+                            <div class="row align-center checkbox-container">
+                                <div class="checkbox">
+                                    <img src="./public/images/icons/tick.png" alt="">
+                                </div>
+                                <p>Auction</p>
+                            </div>
+        
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <div class="row justify-between align-center filter-group-head ">
+                            <h2>Category</h2>
+                            <img src="./public/images/icons/chevron.png" alt="">
+                        </div>
+                        <div class="filter-collapse">
+                            <div class="row align-center checkbox-container">
+                                <div class="checkbox">
+                                    <img src="./public/images/icons/tick.png" alt="">
+                                </div>
+                                <p>Art</p>
+                            </div>
+                            <div class="row align-center checkbox-container">
+                                <div class="checkbox">
+                                    <img src="./public/images/icons/tick.png" alt="">
+                                </div>
+                                <p>Music</p>
+                            </div>
+                            
+                            <div class="row align-center checkbox-container">
+                                <div class="checkbox">
+                                    <img src="./public/images/icons/tick.png" alt="">
+                                </div>
+                                <p>GIF</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-parent-container">
+                <div class="row align-center justify-between tabs-head admin-head">
+                    <div class="tabs-overflow">
+                        <div class="row align-center tabs-container">
+                            <div class="tab tab-active" --data-type="confirmed">
+                                <p>Confirmed</p>
+                                <span></span>
+                            </div>
+                            <div class="tab" --data-type="pending">
+                                <p>Pending</p>
+                                <span></span>
+                            </div>
+                            <div class="tab" --data-type="validated">
+                                <p>Validated</p>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="row input-field align-center">
+                        <input type="text" placeholder="Item Name">
+                        <img src="./public/images/icons/search.png" alt="">
+                    </div>
+                </div>
+                <div class="cards-container" id="cards-target">
+                    <div class="card-common">
+                        <img src="./public/images/art.jpg" alt="">
+                        <div class="card-info">
+                            <div class="card-name row justify-between align-center">
+                                <div>
+                                    <h2>The Valley</h2>
+                                    <p>@theOni</p>
+                                </div>
+                                <p class="card-head-extra">1/2</p>
+                            </div>
+                            <div>
+                                <a href="#" class="card-button card-details">Item Details</a>
+                            </div>
+                            <span class="card-line"></span>
+                            <div class="row justify-between align-center">
+                                <a href="#" class="card-button card-buy glow-green">Confirm</a>
+                                <a href="#" class="card-button card-cancel glow-red">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-common">
+                        <img src="./public/images/art.jpg" alt="">
+                        <div class="card-info">
+                            <div class="card-name row justify-between align-center">
+                                <div>
+                                    <h2>The Valley</h2>
+                                    <p>@theOni</p>
+                                </div>
+                                <p class="card-head-extra">1/2</p>
+                            </div>
+                            <div>
+                                <a href="#" class="card-button card-details">Item Details</a>
+                            </div>
+                            <span class="card-line"></span>
+                            <div class="row justify-between align-center">
+                                <a href="#" class="card-button card-buy glow-green">Confirm</a>
+                                <a href="#" class="card-button card-cancel glow-red">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-common">
+                        <img src="./public/images/art.jpg" alt="">
+                        <div class="card-info">
+                            <div class="card-name row justify-between align-center">
+                                <div>
+                                    <h2>The Valley</h2>
+                                    <p>@theOni</p>
+                                </div>
+                                <p class="card-head-extra">1/2</p>
+                            </div>
+                            <div>
+                                <a href="#" class="card-button card-details">Item Details</a>
+                            </div>
+                            <span class="card-line"></span>
+                            <div class="row justify-between align-center">
+                                <a href="#" class="card-button card-buy glow-green">Confirm</a>
+                                <a href="#" class="card-button card-cancel glow-red">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-common">
+                        <img src="./public/images/art.jpg" alt="">
+                        <div class="card-info">
+                            <div class="card-name row justify-between align-center">
+                                <div>
+                                    <h2>The Valley</h2>
+                                    <p>@theOni</p>
+                                </div>
+                                <p class="card-head-extra">1/2</p>
+                            </div>
+                            <div>
+                                <a href="#" class="card-button card-details">Item Details</a>
+                            </div>
+                            <span class="card-line"></span>
+                            <div class="row justify-between align-center">
+                                <a href="#" class="card-button card-buy glow-green">Confirm</a>
+                                <a href="#" class="card-button card-cancel glow-red">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-common">
+                        <img src="./public/images/art.jpg" alt="">
+                        <div class="card-info">
+                            <div class="card-name row justify-between align-center">
+                                <div>
+                                    <h2>The Valley</h2>
+                                    <p>@theOni</p>
+                                </div>
+                                <p class="card-head-extra">1/2</p>
+                            </div>
+                            <div>
+                                <a href="#" class="card-button card-details">Item Details</a>
+                            </div>
+                            <span class="card-line"></span>
+                            <div class="row justify-between align-center">
+                                <a href="#" class="card-button card-buy glow-green">Confirm</a>
+                                <a href="#" class="card-button card-cancel glow-red">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-common">
+                        <img src="./public/images/art.jpg" alt="">
+                        <div class="card-info">
+                            <div class="card-name row justify-between align-center">
+                                <div>
+                                    <h2>The Valley</h2>
+                                    <p>@theOni</p>
+                                </div>
+                                <p class="card-head-extra">1/2</p>
+                            </div>
+                            <div>
+                                <a href="#" class="card-button card-details">Item Details</a>
+                            </div>
+                            <span class="card-line"></span>
+                            <div class="row justify-between align-center">
+                                <a href="#" class="card-button card-buy glow-green">Confirm</a>
+                                <a href="#" class="card-button card-cancel glow-red">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-common">
+                        <img src="./public/images/art.jpg" alt="">
+                        <div class="card-info">
+                            <div class="card-name row justify-between align-center">
+                                <div>
+                                    <h2>The Valley</h2>
+                                    <p>@theOni</p>
+                                </div>
+                                <p class="card-head-extra">1/2</p>
+                            </div>
+                            <div>
+                                <a href="#" class="card-button card-details">Item Details</a>
+                            </div>
+                            <span class="card-line"></span>
+                            <div class="row justify-between align-center">
+                                <a href="#" class="card-button card-buy glow-green">Confirm</a>
+                                <a href="#" class="card-button card-cancel glow-red">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-common">
+                        <img src="./public/images/art.jpg" alt="">
+                        <div class="card-info">
+                            <div class="card-name row justify-between align-center">
+                                <div>
+                                    <h2>The Valley</h2>
+                                    <p>@theOni</p>
+                                </div>
+                                <p class="card-head-extra">1/2</p>
+                            </div>
+                            <div>
+                                <a href="#" class="card-button card-details">Item Details</a>
+                            </div>
+                            <span class="card-line"></span>
+                            <div class="row justify-between align-center">
+                                <a href="#" class="card-button card-buy glow-green">Confirm</a>
+                                <a href="#" class="card-button card-cancel glow-red">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-common">
+                        <img src="./public/images/art.jpg" alt="">
+                        <div class="card-info">
+                            <div class="card-name row justify-between align-center">
+                                <div>
+                                    <h2>The Valley</h2>
+                                    <p>@theOni</p>
+                                </div>
+                                <p class="card-head-extra">1/2</p>
+                            </div>
+                            <div>
+                                <a href="#" class="card-button card-details">Item Details</a>
+                            </div>
+                            <span class="card-line"></span>
+                            <div class="row justify-between align-center">
+                                <a href="#" class="card-button card-buy glow-green">Confirm</a>
+                                <a href="#" class="card-button card-cancel glow-red">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+         
+                </div>
+                <div class="pagination row justify-between align-center">
+                    <p id="prev" class="pagination-hide">Previous</p>
+                    <div class="row align-center">
+                        <p class="pagination-link pagination-active" >1</p>
+                        <p class="pagination-link" >2</p>
+                        <p class="pagination-link" >3</p>
+                        <p class="pagination-link" >4</p>
+                        <p class="pagination-link" >5</p>
+                    </div>
+                    <p id="next" >Next</p>
+                </div>
+            </div>
+           
+        </div>
+      
+        
+    </main>
+
+    <template id="template-confirmed">
+        <div class="card-common">
+            <img src="./public/images/art.jpg" alt="">
+            <div class="card-info">
+                <div class="card-name row justify-between align-center">
+                    <div>
+                        <h2>The Valley</h2>
+                        <p>@theOni</p>
+                    </div>
+                    <p class="card-head-extra">1/2</p>
+                </div>
+                <div>
+                    <a href="#" class="card-button card-details">Item Details</a>
+                </div>
+                <span class="card-line"></span>
+                <div class="row justify-between align-center">
+                    <a href="#" class="card-button card-buy glow-green">Confirm</a>
+                    <a href="#" class="card-button card-cancel glow-red">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="template-pending">
+        <div class="card-common">
+            <img src="./public/images/art.jpg" alt="">
+            <div class="card-info">
+                <div class="card-name row justify-between align-center">
+                    <div>
+                        <h2>The Valley</h2>
+                        <p>@theOni</p>
+                    </div>
+                    <p class="card-head-extra">2.96 ETH</p>
+                </div>
+                <div class="row align-center justify-between">
+                    <a href="#" class="card-button card-details">Item Details</a>
+                </div>
+                <span class="card-line"></span>
+                <div class="row justify-center">
+                    <a href="#" class="card-button glow-red card-delist">Confirm</a>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="template-validated">
+        <div class="card-common">
+            <img src="./public/images/art.jpg" alt="">
+            <div class="card-info">
+                <div class="card-name row justify-between align-center">
+                    <div>
+                        <h2>The Valley</h2>
+                        <p>@theOni</p>
+                    </div>
+                    <p class="card-head-extra">2.96 ETH</p>
+                </div>
+                <div class="row align-center justify-between">
+                    <p>Validation Date:</p>
+                    <p>Jan 16, 2022</p>
+                </div>
+                <span class="card-line"></span>
+                <div>
+                    <a href="#" class="card-button card-details">Confirm</a>
+        
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <div class="modal">
+        <div class="modal-content">
+            <h2>Confirmation Status</h2>
+            <div class="modal-info">
+                <p>Item ID: <span class="item-id">0x2f7jlDO2</span></p>
+                <p>New Confirmation Status</p>
+                <p id="confirmation-status" class=" glow-green-text"><span>2</span>/2</p>
+            </div>
+            <p class="confirm modal-button modal-confirm item-confirm">Confirm</p>
+            <span></span>
+            <p class="cancel glow-red modal-button modal-undo">Undo</p>
+        </div>
+        <div class="modal-background">
+
+        </div>
+    </div>
+
+    
+    <script src="./public/js/common.js"></script>
+    <script src="./public/js/admin.js"></script>
+    <script src="./public/js/filter.js"></script>
+    <script src="./public/js/pagination.js"></script>
+</body>
+</html>

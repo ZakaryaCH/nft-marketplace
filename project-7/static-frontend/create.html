@@ -1,0 +1,148 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redesign | Create Item</title>
+    <link rel="stylesheet" href="./public/css/common.css">
+    <link rel="stylesheet" href="./public/css/create.css">
+    <link rel="stylesheet" href="./public/css/chat.css">
+</head>
+<body>
+
+    <header>
+        <nav class="nav">
+            <a href="./home.html" class="nav-link branding ">Logo</a>
+            <div class="nav-collapse">
+                <div class="navmap">
+                    <a href="./home.html" class="nav-link">Home</a>
+                    <a href="./store.html" class="nav-link">Store</a>
+                    <a href="./myNFTs.html" class="nav-link">MyNFTs</a>
+                    <a href="./create.html" class="nav-link nav-link-active">Create Item</a>
+                    <a href="./admin.html" class="nav-link">Admin</a>
+                </div>
+                <a href="#" class="button metamask">Connect Metamask</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="section-heading">
+            <h2>Create Item</h2>
+            <span class="glow-green"></span>
+        </div>
+        <form class="form">
+            <label for="upload" class="image-upload">
+                <div class="upload-content">
+                    <img src="./public/images/icons/upload.png" alt="">
+                    <h3>Upload Image</h3>
+                    <p>Max 8 Mb | 4032x2440px</p>
+                </div>
+                <input type="file" name="upload" id="upload" required>
+            </label>
+            <div class="input">
+                <label for="title">Title</label>
+                <div>
+                    <input type="text" name="title" placeholder="Item Title" required>
+                    <span></span>
+                </div>
+            </div>
+            <div class="input">
+                <label for="category">Category</label>
+                <div>
+                    <div class="category-select">
+                        <p id="category-target" >Art</p>
+                        <img src="./public/images/icons/chevron.png" alt="">
+                    </div>
+                    <div class="category-dropdown">
+                        <p class="category-opt" >Art</p>
+                        <p class="category-opt" >Photo</p>
+                        <p class="category-opt" >GIF</p>
+                    </div>
+                    <span></span>
+                </div>
+            </div>
+            <div class="input">
+                <label for="link">External Link</label>
+                <div>
+                    <input type="url" name="link" placeholder="Link" required>
+                    <span></span>
+                </div>
+            </div>
+            <div class="input">
+                <label for="description">Item Description</label>
+                <div>
+                    <textarea name="description" id="" cols="30" rows="10" placeholder="Description" required></textarea>
+                    <span></span>
+                </div>
+            </div>
+            <div class="submit">
+                <input type="submit" value="Create Item" class="button cta glow-green">
+                <p>Mint Fee of 0 ETH will be charged</p>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div>
+            <a href="./home.html" class="footer-branding">Logo</a>
+            <div class="footer-details">
+                <div class="footer-column">
+                    <h2>Sitemap</h2>
+                    <a href="./home.html">Home</a>
+                    <a href="./store.html">Store</a>
+                    <a href="./myNFTs.html">MyNFTs</a>
+                    <a href="./create.html">Create Item</a>
+                    <a href="./admin.html">Admin</a>
+                </div>
+                <div class="footer-column">
+                    <h2>Company</h2>
+                    <a href="#">Explore</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="footer-column socials">
+                    <h2>Check out us on</h2>
+                    <div>
+                        <a href="#"><img src="./public/images/icons/discord.png" alt=""></a>
+                        <a href="#"><img src="./public/images/icons/instagram.png" alt=""></a>
+                        <a href="#"><img src="./public/images/icons/twitter.png" alt=""></a>
+                        <a href="#"><img src="./public/images/icons/facebook.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>© 2021 Redesign. All Rights Reserved</p>
+    </footer>
+
+    <div class="chats-container">
+        <div class="chat-window chat-history-window">
+            <div class="chat-head row align-center">
+                <div class="chat-head-info row align-center">
+                    
+                </div>
+                <img src="./public/images/icons/close.png" alt="" class="chat-close">
+            </div>
+            <div class="chat-content">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="chat-toggles">
+        <div class="extra-toggles">
+            
+        </div>
+        <img src="./public/images/icons/chat-toggle.png" alt="" class="chat-toggle">
+    </div>
+    
+    <script src="./public/js/common.js"></script>
+    <script src="./public/js/create.js"></script>
+    <script src="./public/js/chat.js"></script>
+</body>
+</html>

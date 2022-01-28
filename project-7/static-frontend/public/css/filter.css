@@ -1,0 +1,131 @@
+.filter-sidebar{
+    width: 300px;
+    padding: 32px 32px 72px;
+    box-sizing: border-box;
+    color: var(--white);
+    background: var(--dark-secondary);
+    margin-right: 64px;
+    height: max-content;
+}
+
+.filter-sidebar p{
+    margin: 0;
+}
+
+.filter-sidebar>h2{
+    font-size: 32px !important;
+    margin: 0 0 48px !important;
+}
+
+.filter-sidebar *{
+    user-select: none;
+}
+
+.filter-sidebar h2{
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.checkbox-container{
+    margin-bottom: 16px;
+    padding-left: 16px;
+}
+
+.filters-head{
+    cursor: pointer;
+    margin-bottom: 32px;
+    display: none;
+}
+
+.filters-head h2{
+    font-size: 32px;
+}
+
+.filter-group{
+    margin-bottom: 32px;
+}
+
+.filter-group-head{
+    cursor: pointer;
+}
+
+.filter-collapsed .filter-collapse{
+    max-height: 486px !important;
+
+}
+
+.filter-collapse{
+    max-height: 0px;
+    overflow: hidden;
+    transition: 300ms ease-in-out;
+    padding-top: 24px;
+    box-sizing: border-box;
+}
+
+.filter-group-head img{
+    transition: 250ms ease-in-out;
+}
+
+.filter-collapsed .filter-group-head img{
+    transform: rotate(180deg);
+}
+
+.filter-dropdown-toggle{
+    transform-origin: center;
+    transition: 250ms ease-in-out;
+}
+
+.dropdown-toggled{
+    transform: rotate(180deg);
+}
+
+.checkbox{
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    border: 1.5px solid #707173;
+    box-sizing: border-box;
+    transition: 250ms ease-in-out;
+    padding: 8px 3.5px 6.5px 7px;
+    margin-right: 24px;
+    cursor: pointer;
+}
+
+.checkbox img{
+    opacity: 0;
+    transition: 250ms ease-in-out;
+}
+
+.checkbox-checked{
+    border: 1.5px solid var(--green);
+    background: var(--green);
+}
+
+.checkbox-checked img{
+    opacity: 1;
+}
+
+@media screen and (max-width: 960px){
+    .filter-sidebar{
+        width: 100%;
+        padding-bottom: 0;
+        margin-bottom: 32px;
+    }
+    .filters-head{
+        display: flex;
+    }
+    .filter-group-head h2{
+        font-size: 20px;
+    }
+    .filter-group-collapse{
+        max-height: 0;
+        overflow-y: hidden;
+        transition: 250ms ease-in-out;
+    }
+
+    .filter-group-collapsed{
+        max-height: 560px !important;
+    }
+
+}

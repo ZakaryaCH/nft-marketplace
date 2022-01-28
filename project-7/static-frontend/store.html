@@ -1,0 +1,400 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redesign | Storefront</title>
+    <link rel="stylesheet" href="./public/css/common.css">
+    <link rel="stylesheet" href="./public/css/store.css">
+    <link rel="stylesheet" href="./public/css/card.css">
+    <link rel="stylesheet" href="./public/css/filter.css">
+    <link rel="stylesheet" href="./public/css/chat.css">
+</head>
+<body>
+
+    <header>
+        <nav class="nav">
+            <a href="./home.html" class="nav-link branding ">Logo</a>
+            <div class="nav-collapse">
+                <div class="navmap">
+                    <a href="./home.html" class="nav-link">Home</a>
+                    <a href="./store.html" class="nav-link nav-link-active">Store</a>
+                    <a href="./myNFTs.html" class="nav-link">MyNFTs</a>
+                    <a href="./create.html" class="nav-link">Create Item</a>
+                    <a href="./admin.html" class="nav-link">Admin</a>
+                </div>
+                <a href="#" class="button metamask">Connect Metamask</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="section-heading">
+            <h2>Storefront</h2>
+            <span class="glow-green"></span>
+        </div>
+        <div class="row justify-between section-container main-content">
+            <div class="filter-sidebar">
+                <div class="row align-center justify-between filters-head">
+                    <h2>Filters</h2>
+                    <img src="./public/images/icons/chevron.png" alt="" class="filter-dropdown-toggle">
+                </div>
+                <div class="filter-group-collapse">
+                    <div class="filter-group">
+                        <div class="row justify-between align-center filter-group-head ">
+                            <h2>Listing Type</h2>
+                            <img src="./public/images/icons/chevron.png" alt="">
+                        </div>
+                        <div class="filter-collapse">
+                            <div class="row align-center checkbox-container">
+                                <div class="checkbox">
+                                    <img src="./public/images/icons/tick.png" alt="">
+                                </div>
+                                <p>Fixed Price</p>
+                            </div>
+                            <div class="row align-center checkbox-container">
+                                <div class="checkbox">
+                                    <img src="./public/images/icons/tick.png" alt="">
+                                </div>
+                                <p>Auction</p>
+                            </div>
+        
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <div class="row justify-between align-center filter-group-head ">
+                            <h2>Category</h2>
+                            <img src="./public/images/icons/chevron.png" alt="">
+                        </div>
+                        <div class="filter-collapse">
+                            <div class="row align-center checkbox-container">
+                                <div class="checkbox">
+                                    <img src="./public/images/icons/tick.png" alt="">
+                                </div>
+                                <p>Art</p>
+                            </div>
+                            <div class="row align-center checkbox-container">
+                                <div class="checkbox">
+                                    <img src="./public/images/icons/tick.png" alt="">
+                                </div>
+                                <p>Music</p>
+                            </div>
+                            
+                            <div class="row align-center checkbox-container">
+                                <div class="checkbox">
+                                    <img src="./public/images/icons/tick.png" alt="">
+                                </div>
+                                <p>GIF</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-parent-container">
+                <div class="cards-container" id="cards-target">
+                    <div class="card-common">
+                        <img src="./public/images/art.jpg" alt="">
+                        <div class="card-info">
+                            <div class="card-name">
+                                <h2>The Valley</h2>
+                                <p>@theOni</p>
+                            </div>
+                            <div class="card-buy-extra row justify-between align-center">
+                                <div>
+                                    <div>
+                    
+                                    </div>
+                                    <p>196 Likes</p>
+                                </div>
+                                <p>189 in stock</p>
+                            </div>
+                            <span class="card-line"></span>
+                            <div class="row justify-between align-center">
+                                <div class="card-price row align-center">
+                                    <img src="./public/images/icons/ethereum.png" alt="">
+                                    <p>3.15 ETH</p>
+                                </div>
+                                <a href="#" class="card-button card-buy glow-green">Buy Item</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-common">
+                        <img src="./public/images/art.jpg" alt="">
+                        <div class="card-info">
+                            <div class="card-name">
+                                <h2>The Valley</h2>
+                                <p>@theOni</p>
+                            </div>
+                            <div class="card-buy-extra row justify-between align-center">
+                                <div>
+                                    <div>
+                    
+                                    </div>
+                                    <p>196 Likes</p>
+                                </div>
+                                <p>189 in stock</p>
+                            </div>
+                            <span class="card-line"></span>
+                            <div class="row justify-between align-center">
+                                <div class="card-price row align-center">
+                                    <img src="./public/images/icons/ethereum.png" alt="">
+                                    <p>3.15 ETH</p>
+                                </div>
+                                <a href="#" class="card-button card-buy glow-green">Buy Item</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-common">
+                        <img src="./public/images/art.jpg" alt="">
+                        <div class="card-info">
+                            <div class="card-name">
+                                <h2>The Valley</h2>
+                                <p>@theOni</p>
+                            </div>
+                            <div class="card-buy-extra row justify-between align-center">
+                                <div>
+                                    <div>
+                    
+                                    </div>
+                                    <p>196 Likes</p>
+                                </div>
+                                <p>189 in stock</p>
+                            </div>
+                            <span class="card-line"></span>
+                            <div class="row justify-between align-center">
+                                <div class="card-price row align-center">
+                                    <img src="./public/images/icons/ethereum.png" alt="">
+                                    <p>3.15 ETH</p>
+                                </div>
+                                <a href="#" class="card-button card-buy glow-green">Buy Item</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-common">
+                        <img src="./public/images/art.jpg" alt="">
+                        <div class="card-info">
+                            <div class="card-name">
+                                <h2>The Valley</h2>
+                                <p>@theOni</p>
+                            </div>
+                            <div class="card-buy-extra row justify-between align-center">
+                                <div>
+                                    <div>
+                    
+                                    </div>
+                                    <p>196 Likes</p>
+                                </div>
+                                <p>189 in stock</p>
+                            </div>
+                            <span class="card-line"></span>
+                            <div class="row justify-between align-center">
+                                <div class="card-price row align-center">
+                                    <img src="./public/images/icons/ethereum.png" alt="">
+                                    <p>3.15 ETH</p>
+                                </div>
+                                <a href="#" class="card-button card-buy glow-green">Buy Item</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-common">
+                        <img src="./public/images/art.jpg" alt="">
+                        <div class="card-info">
+                            <div class="card-name">
+                                <h2>The Valley</h2>
+                                <p>@theOni</p>
+                            </div>
+                            <div class="card-buy-extra row justify-between align-center">
+                                <div>
+                                    <div>
+                    
+                                    </div>
+                                    <p>196 Likes</p>
+                                </div>
+                                <p>189 in stock</p>
+                            </div>
+                            <span class="card-line"></span>
+                            <div class="row justify-between align-center">
+                                <div class="card-price row align-center">
+                                    <img src="./public/images/icons/ethereum.png" alt="">
+                                    <p>3.15 ETH</p>
+                                </div>
+                                <a href="#" class="card-button card-buy glow-green">Buy Item</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-common">
+                        <img src="./public/images/art.jpg" alt="">
+                        <div class="card-info">
+                            <div class="card-name">
+                                <h2>The Valley</h2>
+                                <p>@theOni</p>
+                            </div>
+                            <div class="card-buy-extra row justify-between align-center">
+                                <div>
+                                    <div>
+                    
+                                    </div>
+                                    <p>196 Likes</p>
+                                </div>
+                                <p>189 in stock</p>
+                            </div>
+                            <span class="card-line"></span>
+                            <div class="row justify-between align-center">
+                                <div class="card-price row align-center">
+                                    <img src="./public/images/icons/ethereum.png" alt="">
+                                    <p>3.15 ETH</p>
+                                </div>
+                                <a href="#" class="card-button card-buy glow-green">Buy Item</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-common">
+                        <img src="./public/images/art.jpg" alt="">
+                        <div class="card-info">
+                            <div class="card-name">
+                                <h2>The Valley</h2>
+                                <p>@theOni</p>
+                            </div>
+                            <div class="card-buy-extra row justify-between align-center">
+                                <div>
+                                    <div>
+                    
+                                    </div>
+                                    <p>196 Likes</p>
+                                </div>
+                                <p>189 in stock</p>
+                            </div>
+                            <span class="card-line"></span>
+                            <div class="row justify-between align-center">
+                                <div class="card-price row align-center">
+                                    <img src="./public/images/icons/ethereum.png" alt="">
+                                    <p>3.15 ETH</p>
+                                </div>
+                                <a href="#" class="card-button card-buy glow-green">Buy Item</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-common">
+                        <img src="./public/images/art.jpg" alt="">
+                        <div class="card-info">
+                            <div class="card-name">
+                                <h2>The Valley</h2>
+                                <p>@theOni</p>
+                            </div>
+                            <div class="card-buy-extra row justify-between align-center">
+                                <div>
+                                    <div>
+                    
+                                    </div>
+                                    <p>196 Likes</p>
+                                </div>
+                                <p>189 in stock</p>
+                            </div>
+                            <span class="card-line"></span>
+                            <div class="row justify-between align-center">
+                                <div class="card-price row align-center">
+                                    <img src="./public/images/icons/ethereum.png" alt="">
+                                    <p>3.15 ETH</p>
+                                </div>
+                                <a href="#" class="card-button card-buy glow-green">Buy Item</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-common">
+                        <img src="./public/images/art.jpg" alt="">
+                        <div class="card-info">
+                            <div class="card-name">
+                                <h2>The Valley</h2>
+                                <p>@theOni</p>
+                            </div>
+                            <div class="card-buy-extra row justify-between align-center">
+                                <div>
+                                    <div>
+                    
+                                    </div>
+                                    <p>196 Likes</p>
+                                </div>
+                                <p>189 in stock</p>
+                            </div>
+                            <span class="card-line"></span>
+                            <div class="row justify-between align-center">
+                                <div class="card-price row align-center">
+                                    <img src="./public/images/icons/ethereum.png" alt="">
+                                    <p>3.15 ETH</p>
+                                </div>
+                                <a href="#" class="card-button card-buy glow-green">Buy Item</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+    </main>
+
+    <footer>
+        <div>
+            <a href="./home.html" class="footer-branding">Logo</a>
+            <div class="footer-details">
+                <div class="footer-column">
+                    <h2>Sitemap</h2>
+                    <a href="./home.html">Home</a>
+                    <a href="./store.html">Store</a>
+                    <a href="./myNFTs.html">MyNFTs</a>
+                    <a href="./create.html">Create Item</a>
+                    <a href="./admin.html">Admin</a>
+                </div>
+                <div class="footer-column">
+                    <h2>Company</h2>
+                    <a href="#">Explore</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="footer-column socials">
+                    <h2>Check out us on</h2>
+                    <div>
+                        <a href="#"><img src="./public/images/icons/discord.png" alt=""></a>
+                        <a href="#"><img src="./public/images/icons/instagram.png" alt=""></a>
+                        <a href="#"><img src="./public/images/icons/twitter.png" alt=""></a>
+                        <a href="#"><img src="./public/images/icons/facebook.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>© 2021 Redesign. All Rights Reserved</p>
+    </footer>
+
+    <div class="chats-container">
+        <div class="chat-window chat-history-window">
+            <div class="chat-head row align-center">
+                <div class="chat-head-info row align-center">
+                    
+                </div>
+                <img src="./public/images/icons/close.png" alt="" class="chat-close">
+            </div>
+            <div class="chat-content">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="chat-toggles">
+        <div class="extra-toggles">
+            
+        </div>
+        <img src="./public/images/icons/chat-toggle.png" alt="" class="chat-toggle">
+    </div>
+    
+    <script src="./public/js/common.js"></script>
+    <script src="./public/js/store.js"></script>
+    <script src="./public/js/filter.js"></script>
+    <script src="./public/js/chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+@media screen and (max-width: 960px){
+    main>.row{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .section-heading{
+        width: max-content;
+        
+    }
+    .section-heading h2{
+        width: max-content;
+        padding: 0 24px;
+    }
+}

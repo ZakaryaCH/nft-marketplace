@@ -1,0 +1,155 @@
+.card-common{
+    width: 335px;
+    border-radius: 16px;
+    overflow: hidden;
+    color: var(--white);
+    margin-bottom: 32px;
+}
+
+.card-common p{
+    margin: 0;
+}
+
+.card-info{
+    padding: 16px 24px 24px;
+    box-sizing: border-box;
+    background: var(--dark-secondary);
+}
+
+.card-common>img{
+    height: 264px;
+}
+
+.card-name h2{
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0;
+}
+
+.card-name p{
+    opacity: 0.4;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+
+
+.card-name, .card-buy-extra{
+    margin-bottom: 24px;
+}
+
+.card-buy-extra p{
+    font-weight: 600;
+}
+
+.card-buy-extra div p{
+    opacity: 0.4;
+    font-weight: 400;
+}
+
+.card-line{
+    width: 100%;
+    background: var(--dark-primary);
+    height: 1.5px;
+    border-radius: 8px;
+    display: block;
+    margin: 24px 0 16px;
+    content: '';
+}
+
+.card-button{
+    padding: 8px 32px;
+    box-sizing: border-box;
+    border-radius: 24px;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+}
+
+.card-buy{
+    background: var(--green);
+    color: var(--white);
+    transition: 250ms ease-in-out;
+}
+
+.card-buy:hover{
+    background: var(--green-hover);
+}
+
+.card-details{
+    width: 100%;
+    background: var(--white);
+    color: var(--dark-primary);
+    text-align: center;
+}
+
+.card-cancel{
+    background: var(--red);
+    color: var(--white);
+}
+
+.card-head-extra{
+    color: var(--green);
+    font-size: 16px !important;
+    opacity: 1 !important;
+}
+
+.card-price p{
+    margin: 0 0 0 16px;
+}
+
+.card-delist{
+    width: 80%;
+    text-align: center;
+    background: var(--red);
+    color: var(--white);
+}
+
+.card-list-price{
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #535966;
+    margin: 0 24px 0 0;
+    box-sizing: border-box;
+    width: 140px;
+}
+
+.card-common form{
+    margin: 0;
+}
+
+.card-list-price input{
+    background: none;
+    outline: none;
+    border: none;
+    color: var(--white);
+    font-size: 16px;
+    appearance: none;
+    -moz-appearance: textfield;
+    width: 80%;
+    font-weight: 600;
+}
+
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cards-parent-container{
+    flex-grow: 2;
+    max-width: 72%;
+}
+
+@media screen and (max-width: 960px){
+    .cards-parent-container{
+        max-width: 100%;
+    }
+    .card-common{
+        width: 310px;
+    }
+}
